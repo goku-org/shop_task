@@ -78,50 +78,6 @@ class ProductDetailsView extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: symmetricHorizontalPadding3(),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                TextUtil(
-                                  text:
-                                      '${provider.product!.price} ${'le'.tr()}',
-                                  fontSize: 24.sp,
-                                  fontWeight: FontWeight.bold,
-                                  color: mainClr,
-                                ),
-                                const Spacer(),
-                                IconButtonUtil(
-                                  icon: Icons.add_circle,
-                                  color: mainClr,
-                                  iconSize: 35.sp,
-                                  padding: EdgeInsets.zero,
-                                  constraints: const BoxConstraints(),
-                                  onClick: () => context
-                                      .read<CartViewModel>()
-                                      .incrementQuantity(index: index),
-                                ),
-                                horizontalSpace1(),
-                                TextUtil(
-                                  text: '2',
-                                  fontSize: 24.sp,
-                                  color: blackClr,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                                horizontalSpace1(),
-                                IconButtonUtil(
-                                  icon: Icons.remove_circle,
-                                  color: mainClr,
-                                  iconSize: 35.sp,
-                                  padding: EdgeInsets.zero,
-                                  constraints: const BoxConstraints(),
-                                  onClick: () => context
-                                      .read<CartViewModel>()
-                                      .decrementQuantity(index: index),
-                                ),
-                              ],
-                            ),
-                          ),
                           verticalSpace2(),
                           Container(
                             height: 40.h,

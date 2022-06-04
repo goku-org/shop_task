@@ -97,6 +97,7 @@ class CartItemWidget extends StatelessWidget {
             iconSize: 35.sp,
             onClick: delete,
           ),
+          const SizedBox(width: 5,),
         ],
       ),
     );
